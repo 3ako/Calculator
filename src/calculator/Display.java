@@ -12,7 +12,6 @@ public class Display {
         display = new JLabel(this.text,SwingConstants.CENTER);
         display.setBackground(Color.DARK_GRAY);
         display.setEnabled(false);
-//        display.setFont(display.getFont().deriveFont(100f));
         display.setFont(new Font("Arial",Font.PLAIN,fontsize));
         display.setOpaque(true);
         display.setBackground(new Color(22, 54, 32));

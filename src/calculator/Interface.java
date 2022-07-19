@@ -77,10 +77,6 @@ class Interface extends JPanel {
             if (command.equals("C")){
                 setDefaultCondition();
             }
-//            else if (command.equals("x²")) {
-//                lastCommand = command;
-//                calculate(new BigDecimal(display.getText()));
-//            }
             else if (command.equals("²√")) {
                 lastCommand = command;
                 calculate(new BigDecimal(display.getText()));
@@ -108,7 +104,6 @@ class Interface extends JPanel {
         else if (lastCommand.equals("÷"))
             result = result.divide(x, 5, RoundingMode.HALF_EVEN);
         else if (lastCommand.equals("=")) {
-//            historyDisplay.setText("");
             result = x;
         }else if (lastCommand.equals("²√")){
             result = x.sqrt(new MathContext(2));
@@ -126,10 +121,8 @@ class Interface extends JPanel {
                 BigDecimal val = new BigDecimal(result.intValue());
                 for (int count = 1; count < x.intValue(); count = count + 1) {
                     result = result.multiply(val);
-                    System.out.println(result.toString());
                 }
             }
-//            System.out.println(result.toString());
         }
         if (result.compareTo(BigDecimal.ZERO) == 0)
             result = BigDecimal.ZERO;
